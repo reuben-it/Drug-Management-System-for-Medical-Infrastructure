@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Select Access</h1>
+        <div class="button-group">
+            <div class="card">
+                <img src="{{ url_for('static', filename='pictures/Hospitals1.png') }}" alt="HQ">
+                <a href="{{ url_for('login', user='hq') }}" class="user-button">Executive Offices</a>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='pictures/Pharmacy.png') }}" alt="Clinics">
+                <a href="{{ url_for('login', user='clinics') }}" class="user-button">Pharmacies</a>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='pictures/storage.png') }}" alt="Vendors">
+                <a href="{{ url_for('login', user='vendors') }}" class="user-button">Vendors</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
